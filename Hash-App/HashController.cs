@@ -35,9 +35,9 @@ using System.Security.Cryptography;
             }
             
         }
-        public void UpdateView( byte[] source, Action<byte[]> toDo)
+        public  void  UpdateView( byte[] source, Action<byte[]> toDo)
         {
-            hashView.Update(hashModel.GetHashCode(source), toDo);
+         hashView.Update(hashModel.GetHashCode(source), toDo);
         }
      
 

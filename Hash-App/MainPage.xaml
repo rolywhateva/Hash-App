@@ -69,10 +69,13 @@
             
         </StackPanel> 
         <StackPanel Margin="20" Name="Second" Grid.Column="1" Grid.Row="0">
+            <TextBlock>
+                The hash is : 
+            </TextBlock>
             <TextBlock x:Name="ResultTextBlock"  
                        Height="134" 
                        TextWrapping="Wrap"
-                       TextAlignment="Center"/>
+                       />
 
         </StackPanel>
 

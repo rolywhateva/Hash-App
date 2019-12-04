@@ -73,20 +73,25 @@ namespace Hash_App
             HashController controller = new HashController(new HashModel(SHA256.Create()), new HashView());
            
             controller.SetBasedOnString(chosenAlgorithmName);
-            controller.UpdateView(rez, async (result) => {
+              controller.UpdateView(rez, (result) =>
+            {
+
                 StringBuilder builder = new StringBuilder();
                 for (int i = 0; i < result.Length; i++)
                     builder.Append(result[i].ToString("x2"));
                 ResultTextBlock.Text = builder.ToString();
-              //  await new MessageDialog(builder.ToString()).ShowAsync();
+                //  await new MessageDialog(builder.ToString()).ShowAsync();
 
 
             });
+            
+           
            
            
 
 
         }
+       
         #region Utils 
         private async   Task<StorageFile> GetFile(Action<Exception> errorHandler=null)
         {
@@ -122,11 +127,13 @@ namespace Hash_App
                 else
                     errorHandler(exception);
             }
+            /*
             BitArray bytes = new BitArray(buffer.ToArray());
             byte[] array = new byte[bytes.Length];
             for (int i = 0; i < array.Length; i++)
                 array[i] = (byte)(bytes[i] ? 1 : 0);
-            return array;
+                */
+            return buffer.ToArray();
         }
 
         #endregion 

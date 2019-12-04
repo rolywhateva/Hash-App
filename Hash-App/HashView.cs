@@ -10,6 +10,7 @@ using System.Threading.Tasks;
         internal void Update(byte[] source, Action<byte[]> toDo)
         {
             toDo(source);
+
         }
     }
 
