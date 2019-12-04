@@ -48,19 +48,31 @@
         <!--#endregion-->
 
         <StackPanel Margin="10" Name="First" Grid.Column="0" Grid.Row="0">
-            <TextBlock x:Name="Title" FontSize="40px" TextAlignment="Center">Hash App</TextBlock>
+            <TextBlock x:Name="Title" 
+                       FontSize="40px" 
+                       TextAlignment="Center">
+                      Hash App
+            </TextBlock>
 
-            <ComboBox 
-                      PlaceholderText="Choose your Algorithm"
+            <ComboBox PlaceholderText="Choose your Algorithm"
                       ItemsSource="{x:Bind algorithms}"
-                      SelectionChanged="ComboBox_SelectionChanged" HorizontalAlignment="Center"/>
+                      SelectionChanged="ComboBox_SelectionChanged" 
+                      HorizontalAlignment="Center"/>
 
            
-            <Button x:Name="HashButton" Click="HashButton_ClickAsync" HorizontalAlignment="Center" Margin="10,20,0,0">Choose file and hash</Button>
+            <Button x:Name="HashButton" 
+                    Click="HashButton_ClickAsync" 
+                    HorizontalAlignment="Center" 
+                    Margin="10,20,0,0">
+                    Choose file and hash
+            </Button>
             
-        </StackPanel>
+        </StackPanel> 
         <StackPanel Margin="20" Name="Second" Grid.Column="1" Grid.Row="0">
-            <TextBlock x:Name="ResultTextBlock"  Height="134" TextWrapping="Wrap" TextAlignment="Center"/>
+            <TextBlock x:Name="ResultTextBlock"  
+                       Height="134" 
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"/>
 
         </StackPanel>
 

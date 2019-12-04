@@ -78,7 +78,7 @@ namespace Hash_App
                 for (int i = 0; i < result.Length; i++)
                     builder.Append(result[i].ToString("x2"));
                 ResultTextBlock.Text = builder.ToString();
-                await new MessageDialog(builder.ToString()).ShowAsync();
+              //  await new MessageDialog(builder.ToString()).ShowAsync();
 
 
             });

@@ -31,6 +31,7 @@ using System.Security.Cryptography;
                 case "SHA256":Algorithm = SHA256.Create(); break;
                 case "SHA1Managed":Algorithm = SHA1Managed.Create(); break;
 
+
             }
             
         }
